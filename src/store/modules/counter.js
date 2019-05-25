@@ -7,6 +7,9 @@ const state = {
 // They also can be mapped in the component with import { mapGetters } then used in an
 // array in computed method. (see Result.vue)
 const getters = {
+    counter: state => {
+        return state.counter;
+    },
     doubleCounter: state => {
         return state.counter * 2;
     },

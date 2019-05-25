@@ -17,13 +17,15 @@
         // Now we can access them directly in html {{ }} with the name
         computed: {
             ...mapGetters([
+                'counter',
                 'doubleCounter',
                 'stringCounter'
             ]),
-            counter() {
-                // need to access counter.counter because the store.js has been split up in counter.js
-                return this.$store.state.counter.counter;
-            },
+            // Without getter
+            // counter() {
+            //     // need to access counter.counter because the store.js has been split up in counter.js
+            //     return this.$store.state.counter.counter;
+            // },
         }
     }
         // with state in App.vue passed as props
